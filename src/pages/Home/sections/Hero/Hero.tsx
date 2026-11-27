@@ -7,7 +7,7 @@ import EmailIcon from "@mui/icons-material/Email";
 import StyledButton from "../../../../components/StyledButton/StyledButton";
 import AnimatedBackground from "../../../../components/AnimatedBackground/AnimatedBackground";
 import { keyframes } from "@mui/system";
-
+import TypingText from "../../../../components/TypingText/TypingText";
 
 const glow = keyframes`
   0%, 100% {
@@ -33,23 +33,22 @@ const Hero = () => {
     overflow: "hidden",
   }));
 
- const StyledImg = styled("img")(() => ({
-  display: "block",
-  margin: "0 auto",
-  position: "relative",
-  zIndex: 2,
-  borderRadius: "50%",
-  width: "75%",
-  maxWidth: "350px",
-  border: "5px solid hsl(197, 100%, 50%)",
-  animation: `${glow} 8s ease-in-out infinite`,
-}));
+  const StyledImg = styled("img")(() => ({
+    display: "block",
+    margin: "0 auto",
+    position: "relative",
+    zIndex: 2,
+    borderRadius: "50%",
+    width: "75%",
+    maxWidth: "350px",
+    border: "5px solid hsl(197, 100%, 50%)",
+    animation: `${glow} 8s ease-in-out infinite`,
+  }));
 
   return (
     <>
       <StyledHero>
         <AnimatedBackground />
-        
 
         <Container maxWidth="lg">
           <Grid container spacing={2}>
@@ -68,19 +67,20 @@ const Hero = () => {
                 Randerson
               </Typography>
 
-              <Typography
-                variant="h1"
+              <TypingText
+                text="I'm a Software Engineer"
+                speed={100}
+                variant="h2"
                 align="center"
                 sx={{
                   color: "primary.contrastText",
                   fontSize: { xs: "1.8rem", md: "3.75rem" },
                 }}
-              >
-                I'm a Software Engineer
-              </Typography>
+              />
 
               <Grid
                 container
+                spacing={2}
                 sx={{ display: "flex", justifyContent: "center", mt: 8 }}
               >
                 <Grid
@@ -88,6 +88,7 @@ const Hero = () => {
                   sx={{ display: "flex", justifyContent: "center" }}
                 >
                   <StyledButton
+                    onClick={() => console.log("download")}
                     variant="outlined"
                     startIcon={<DownloadIcon />}
                     sx={{ color: "white", borderColor: "white" }}
@@ -99,7 +100,11 @@ const Hero = () => {
                   size={{ xs: 12, md: 4 }}
                   sx={{ display: "flex", justifyContent: "center" }}
                 >
-                  <StyledButton variant="outlined" startIcon={<EmailIcon />}>
+                  <StyledButton
+                    onClick={() => console.log("contact")}
+                    variant="outlined"
+                    startIcon={<EmailIcon />}
+                  >
                     Contact me
                   </StyledButton>
                 </Grid>
