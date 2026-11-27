@@ -88,6 +88,9 @@ const Hero = () => {
                   sx={{ display: "flex", justifyContent: "center" }}
                 >
                   <StyledButton
+                  
+                  href="/Randerson-Souza-Curriculo-Desenvolvedor.pdf"
+                  {...{ download: "Randerson-Souza-Curriculo-Desenvolvedor.pdf" }}
                     onClick={() => console.log("download")}
                     variant="outlined"
                     startIcon={<DownloadIcon />}
@@ -101,6 +104,7 @@ const Hero = () => {
                   sx={{ display: "flex", justifyContent: "center" }}
                 >
                   <StyledButton
+                  href="mailto:randerson.fsouza@gmail.com"
                     onClick={() => console.log("contact")}
                     variant="outlined"
                     startIcon={<EmailIcon />}
