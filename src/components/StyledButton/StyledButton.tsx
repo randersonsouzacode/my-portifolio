@@ -10,6 +10,7 @@ const StyledButton = styled(Button)(() => ({
   justifyContent: "center",
   gap: "10px",
   textTransform: "none",
+  width: "180px",
 
   "&:hover": {
     borderColor: "white",
