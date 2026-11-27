@@ -6,6 +6,14 @@ const StyledToolbar = styled(Toolbar)(() => ({
   justifyContent: "space-evenly",
 }));
 
+const NavButton = styled(Button)(() => ({
+  color: "white",
+  textTransform: "none",
+  fontFamily: "Arial, sans-serif",
+  fontSize: "14px",
+  fontWeight: 500,
+}));
+
 const NavBar = () => {
   return (
     <AppBar
@@ -13,15 +21,9 @@ const NavBar = () => {
       sx={{ background: "transparent", boxShadow: "none", zIndex: 3 }}
     >
       <StyledToolbar>
-        <Button href="#about" sx={{ color: "white", textTransform: "none" }}>
-          About
-        </Button>
-        <Button href="#skills" sx={{ color: "white", textTransform: "none" }}>
-          Skills
-        </Button>
-        <Button href="#projects" sx={{ color: "white", textTransform: "none" }}>
-          Projects
-        </Button>
+        <NavButton href="#about">About</NavButton>
+        <NavButton href="#skills">Skills</NavButton>
+        <NavButton href="#projects">Projects</NavButton>
       </StyledToolbar>
     </AppBar>
   );

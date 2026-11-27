@@ -68,7 +68,7 @@ const Hero = () => {
               </Typography>
 
               <TypingText
-                text="I'm a Software Engineer"
+                text="Software Specialist"
                 speed={100}
                 variant="h2"
                 align="center"
