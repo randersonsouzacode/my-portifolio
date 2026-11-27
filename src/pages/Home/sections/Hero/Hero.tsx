@@ -39,7 +39,7 @@ const Hero = () => {
   position: "relative",
   zIndex: 2,
   borderRadius: "50%",
-  width: "80%",
+  width: "75%",
   maxWidth: "350px",
   border: "5px solid hsl(197, 100%, 50%)",
   animation: `${glow} 8s ease-in-out infinite`,
